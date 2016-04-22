@@ -1,0 +1,42 @@
+#ifndef _ROOM_H
+#define _ROOM_H
+
+#include <string>
+using std::string;
+
+#include "Item.cpp"
+
+class Game {
+
+typedef Border
+{
+  char direction;
+  Room* room;  
+}border;
+
+ public:
+  Room(const String &tempName, String &tempDescription);
+  
+  void addBorder(const String &dir, Room* const borderRoom);
+  void addItem(const Item &item);
+  void removeItem(String itemName);
+  Room* const getNextRoom(const string &dirName);
+
+  String getDescription();
+  String getName();
+  String getType();
+
+ private:
+
+  vector<Item> items;
+  vector<border> borders;
+  String description;
+  String name;
+  String type;
+  String status;
+  
+
+  
+
+};
+#endif

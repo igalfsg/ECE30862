@@ -1,0 +1,45 @@
+#include "Item.h"
+
+Item::Item(string name, string description, string status, string writing)
+{
+  this->name = name;
+  this->description = description;
+  this->status = status;
+  this->writing = writing;
+}
+
+string Item::getName()
+  {
+    return name;
+  }
+  
+string Item::getDescription() 
+  {
+    return description;
+  }
+string Item::getStatus()
+  {
+    return status;
+  }
+
+string Item::getWriting()
+{
+  return writing;
+}
+
+void Item::setName(string newName)
+{
+  name = newName;
+}
+
+void Item::setDescription(string newName)
+{
+  description = newDescription;
+}
+
+bool Item::isOn()
+{
+  //
+} 
+
+
